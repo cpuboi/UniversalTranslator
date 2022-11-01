@@ -5,7 +5,11 @@ Alfa Version 0.0.1
   
 This is an offline translator that utilizes several ML models. (Only m2m100 as of version 0.0.1)  
 
-fastapi_translation_server must be started for the Universal Translator to work. 
+UniversalTranslationServer must be started for the Universal Translator to work. 
+
+
+### Design ###
+![image](example.jpg)
 
 
 ## Setup ##
