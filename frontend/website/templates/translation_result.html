@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>
+    Universal Translator
+</title>
+{% endblock %}
+
+{% block content %}
+<br>
+<!-- Navigation (Stays on Top) -->
+<div id="home">
+    <h class="header-subtitle">Source text</h>
+    <br>
+    <div class="box">
+        <h5>
+            {{input_text}}
+        </h5>
+    </div>
+    <br>
+    <h class="header-subtitle">Translated text</h>
+    <br>
+
+    <div class="box">
+        <h5>
+            {{translated_text}}
+        </h5>
+    </div>
+    <br>
+
+</div>
+<br>
+<br>
+<br>
+<a href="/" style="color: #60ebb1"> Return to main page</a> <br>
+
+{% endblock %}
+

@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>
+    Universal Translator
+</title>
+{% endblock %}
+
+
+{% block content %}
+<script>
+function showDiv() {
+  document.getElementById('SubmitButton').style.display = "none";
+  document.getElementById('loadingGif').style.display = "block";
+
+}
+
+</script>
+<header>
+    <h class="header-title">Universal Translator</h>
+</header>
+
+<main class="smalltext">
+    <!--Perhaps should not use smalltext in main?? -->
+    <section>
+        <br>
+
+        <div class="centrify">
+
+            <form action="#" class="list" method="post" enctype="multipart/form-data">
+                Input Language: <input list="languages" class="form-control" type="text" name="inputLanguage"
+                                       value='{{inputLanguage}}' placeholder="Type language here..." required>
+                Output Language: <input list="languages" class="form-control" type="text" name="outputLanguage"
+                                        value='{{outputLanguage}}' placeholder="Type language here.." required>
+                <datalist id="languages">
+                    {% for language in languages %}
+                    <option value={{language}}></option>
+                    {% endfor %}
+                </datalist>
+                <br>
+                <br>
+                <textarea name="inputText" style="width:100%; height:200px; min-width:500px" required></textarea>
+                <br>
+                <br>
+                <input type="submit" value="Translate" name="submit" id="SubmitButton" width="104" height="25"
+                       border="0" tabindex="5" onclick="showDiv()">
+
+            </form>
+            <div>
+
+                <div id="loadingGif" style="display:none">
+
+                    <img src="static/loader2.gif">
+                </div>
+                <br>
+                {% for error in errors %}
+                <li style="list-style-type:none; color: #d8df20 ;font-weight: bold">{{error}}</li>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</main>
+
+
+{% endblock %}

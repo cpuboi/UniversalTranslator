@@ -1,0 +1,19 @@
+# For web
+fastapi
+uvicorn
+
+# For templates
+jinja2
+
+# For input validation
+pydantic
+
+
+# Dotenv files
+python-dotenv
+
+# For input forms
+python-multipart
+
+# For API Rest communication
+aiohttp
