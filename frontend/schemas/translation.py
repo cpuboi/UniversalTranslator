@@ -13,7 +13,7 @@ class InputTranslationModel(BaseModel):
     output_language: Optional[str] = None
     input_text: str
     translated_text: Optional[str] = None
-    translation_model: Optional[str] = None
+    translation_model: Optional[str] = "default"
 
     @validator('src_lang', 'dst_lang', check_fields=False)
     def language_must_be_iso(cls, v):
